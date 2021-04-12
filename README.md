@@ -28,13 +28,13 @@
 
 ### c. En el mapa se debe visualizar mediante un pin el nombre del cliente y su dirección.
 
-## d. Se deben limpiar los campos de texto al guardar la información en la tabla.
+### d. Se deben limpiar los campos de texto al guardar la información en la tabla.
 
-## e. Utiliza window.alert para mostrar mensajes de error, advertencia, informativos, etc.
+### e. Utiliza window.alert para mostrar mensajes de error, advertencia, informativos, etc.
 
-## f. Al dar clic al botón Eliminar Clientes se debe eliminar de la tabla y del mapa la información de los clientes.
+### f. Al dar clic al botón Eliminar Clientes se debe eliminar de la tabla y del mapa la información de los clientes.
 
-### - Al dar clic en marcador muestra la información del marcador, latitud y longitud.
+## Al dar clic en marcador muestra la información del marcador, nombre del cliente y su dirección latitud y longitud.
 
 Resultado final:
 ![Preview](./images/Preview.png)
