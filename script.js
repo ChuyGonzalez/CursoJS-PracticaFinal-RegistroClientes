@@ -1,5 +1,8 @@
 console.log("Practica Final");
 /** Variables Globales */
+const _forms = document.getElementById("form");
+const error = document.getElementById("error");
+
 let arrayErrores = [];
 let arrayClientes = [];
 /** Nombre completo */
@@ -21,6 +24,7 @@ let cp = document.getElementById("txtCP");
 let latitud = document.getElementById("txtLat");
 let longitud = document.getElementById("txtLng");
 /** Controles */
+let btnRegistrar = document.getElementById("btnRegistrar");
 let btnEliminar = document.getElementById("btnEliminar");
 
 let map;
@@ -43,9 +47,37 @@ let mapOptions = {
 };
 
 //#region Funciones
+function submit(event) {
+  console.log("entro submit");
+  // For this example, don't actually submit the form
+  event.preventDefault(false);
+}
 
 /** Registra Cliente. */
 function registrar() {
+
+  /** Obtener todos los controles del formulario a los que queremos aplicar 
+   * estilos de validación personalizados de Bootstrap */
+  var forms = document.querySelectorAll(".needs-validation");
+
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
+        if (!form.checkValidity() || arrayErrores.length > 0) {
+          event.preventDefault();
+          event.stopPropagation();
+          console.log("invalid");
+          forms.onsubmit = submit;         
+        } else {
+          forms.onsubmit = submit(event);
+        }
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+
   document.getElementById("divErrores").innerHTML = "";
   document.getElementById("divTablaClientes").innerHTML = "";
   arrayErrores = [];
@@ -161,7 +193,7 @@ function agregarMarcadores() {
   markersArray.push(marker);
   agregarMarcador();
   mostrarTablaResultados();
-  limpiarInputs();
+  //limpiarInputs();
 }
 
 /** Convertir string a número. */

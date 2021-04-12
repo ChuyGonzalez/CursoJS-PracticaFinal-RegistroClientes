@@ -35,149 +35,159 @@
         <div id="general-content">
             <div class="row align-items-center">
                 <h1>ALTA DE CLIENTES</h1>
-                <form id="frmRegistro" class="row g-3">
-                    <div id="divGenerales" class="col-sm-4">
-                        <h2>Datos Generales</h2>
-                        <!-- RFC -->
-                        <div class="mb-3">
-                            <label for="txtRFC" class="form-label">RFC:</label>
-                            <input type="text" id="txtRFC" class="form-control" placeholder="RFC" size="13" required
-                                aria-describedby="txtRFCHelpInline">
-                            <div class="col-auto">
-                                <span id="txtRFCHelpInline" class="form-text">
-                                    Máximo 12-13 caracteres.
-                                </span>
+                <form id="form" class="needs-validation">
+                    <p id="error" hidden>Por favor rellene todos los campos.</p>
+                    <div class="row g-3">
+                        <div id="divGenerales" class="col-sm-4">
+                            <h2>Datos Generales</h2>
+                            <!-- RFC -->
+                            <div class="mb-3">
+                                <label for="txtRFC" class="form-label">RFC:</label>
+                                <input type="text" id="txtRFC" class="form-control validate" placeholder="RFC" size="13"
+                                    required aria-describedby="txtRFCHelpInline">
+                                <div class="col-auto">
+                                    <span id="txtRFCHelpInline" class="form-text">
+                                        Máximo 12-13 caracteres.
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <br />
-                        <!-- Nombre completo -->
-                        <div class="mb-3">
-                            <label for="txtAPaterno" class="form-label">Apellido Paterno:</label>
-                            <input type="text" class="form-control" id="txtAPaterno" placeholder="Apellido Paterno"
-                                required />
-                        </div>
-                        <br />
-                        <div class="mb-3">
-                            <label for="txtAMaterno" class="form-label">Apellido Materno:</label>
-                            <input type="text" class="form-control" id="txtAMaterno" placeholder="Apellido Materno"
-                                required />
-                        </div>
-                        <br />
-                        <div class="mb-3">
-                            <label for="txtNombre" class="form-label">Nombre(s):</label>
-                            <input type="text" class="form-control" id="txtNombre" placeholder="Nombre(s)" required />
-                        </div>
-                        <br />
-                        <!-- Edad -->
-                        <div class="mb-3">
-                            <label for="txtEdad" class="form-label">Edad:</label>
-                            <input type="number" class="form-control" id="txtEdad" placeholder="Edad" size="2" required
-                                aria-describedby="txtEdadCHelpInline">
-                            <div class="col-auto">
-                                <span id="txtEdadCHelpInline" class="form-text">
-                                    Entre 17-100 años.
-                                </span>
+                            <br />
+                            <!-- Nombre completo -->
+                            <div class="mb-3">
+                                <label for="txtAPaterno" class="form-label">Apellido Paterno:</label>
+                                <input type="text" class="form-control" id="txtAPaterno" placeholder="Apellido Paterno"
+                                    required />
                             </div>
-                        </div>
-                        <br />
-                        <!-- Correos -->
-                        <div class="mb-3">
-                            <label for="txtCorreos" class="form-label">Correo(s):</label>
-                            <input type="text" class="form-control" id="txtCorreos"
-                                placeholder="correo@email.com, correo@email.com" required />
-                        </div>
-                        <br />
-                        <!-- Teléfonos -->
-                        <div class="mb-3">
-                            <label for="txtTelefonos" class="form-label">Teléfono(s):</label>
-                            <input type="text" class="form-control" id="txtTelefonos"
-                                placeholder="1111111111, 2222222222" required />
-                        </div>
-                        <br />
-                        <!-- Sexo -->
-                        <div class="mb-3">
-                            <label class="form-label">Sexo:</label>
-                            <div>
-                                <input type="radio" id="rbFemenino" name="sexo" value="Mujer">
-                                <label for="rbFemenino">Femenino</label>
+                            <br />
+                            <div class="mb-3">
+                                <label for="txtAMaterno" class="form-label">Apellido Materno:</label>
+                                <input type="text" class="form-control" id="txtAMaterno" placeholder="Apellido Materno"
+                                    required />
                             </div>
+                            <br />
+                            <div class="mb-3">
+                                <label for="txtNombre" class="form-label">Nombre(s):</label>
+                                <input type="text" class="form-control" id="txtNombre" placeholder="Nombre(s)"
+                                    required />
+                            </div>
+                            <br />
+                            <!-- Edad -->
+                            <div class="mb-3">
+                                <label for="txtEdad" class="form-label">Edad:</label>
+                                <input type="number" class="form-control" id="txtEdad" placeholder="Edad" size="2"
+                                    required aria-describedby="txtEdadCHelpInline">
+                                <div class="col-auto">
+                                    <span id="txtEdadCHelpInline" class="form-text">
+                                        Entre 17-100 años.
+                                    </span>
+                                </div>
+                            </div>
+                            <br />
+                            <!-- Correos -->
+                            <div class="mb-3">
+                                <label for="txtCorreos" class="form-label">Correo(s):</label>
+                                <input type="text" class="form-control" id="txtCorreos"
+                                    placeholder="correo@email.com, correo@email.com" required />
+                            </div>
+                            <br />
+                            <!-- Teléfonos -->
+                            <div class="mb-3">
+                                <label for="txtTelefonos" class="form-label">Teléfono(s):</label>
+                                <input type="text" class="form-control" id="txtTelefonos"
+                                    placeholder="1111111111, 2222222222" required />
+                            </div>
+                            <br />
+                            <!-- Sexo -->
+                            <div class="mb-3">
+                                <label class="form-label">Sexo:</label>
+                                <div>
+                                    <input type="radio" id="rbFemenino" name="sexo" value="Mujer">
+                                    <label for="rbFemenino">Femenino</label>
+                                </div>
 
-                            <div>
-                                <input type="radio" id="rbMasculino" name="sexo" value="Hombre">
-                                <label for="rbMasculino">Masculino</label>
-                            </div>
+                                <div>
+                                    <input type="radio" id="rbMasculino" name="sexo" value="Hombre">
+                                    <label for="rbMasculino">Masculino</label>
+                                </div>
 
-                            <div>
-                                <input type="radio" id="rbOtro" name="sexo" value="Otro">
-                                <label for="rbOtro">Otro</label>
+                                <div>
+                                    <input type="radio" id="rbOtro" name="sexo" value="Otro">
+                                    <label for="rbOtro">Otro</label>
+                                </div>
                             </div>
+                            <br />
                         </div>
-                        <br />
-                        <!-- Dirección -->
-                        <h2>Domicilio</h2>
-                        <div class="mb-3">
-                            <label for="txtCalle" class="form-label">Calle:</label>
-                            <input type="text" id="txtCalle" class="form-control" placeholder="Calle" required />
-                        </div>
-                        <br />
-                        <div class="mb-3">
-                            <label for="txtNExterior" class="form-label">Nº Exterior:</label>
-                            <input type="text" id="txtNExterior" class="form-control" placeholder="Núm. Exterior"
-                                required />
-                        </div>
-                        <br />
-                        <div class="mb-3">
-                            <label for="txtMunicipio" class="form-label">Municipio:</label>
-                            <input type="text" id="txtMunicipio" class="form-control" placeholder="Municipio"
-                                required />
-                        </div>
-                        <br />
-                        <div class="mb-3">
-                            <label for="txtEstado" class="form-label">Estado:</label>
-                            <input type="text" id="txtEstado" class="form-control" placeholder="Estado" required />
-                        </div>
-                        <br />
-                        <div class="mb-3">
-                            <label for="txtCP" class="form-label">código Postal:</label>
-                            <input type="text" id="txtCP" class="form-control" placeholder="CP" required
-                                aria-describedby="txtCPHelpInline" />
-                            <div class="col-auto">
-                                <span id="txtCPHelpInline" class="form-text">
-                                    Máximo 5 caracteres.
-                                </span>
+                        <div id="divGenerales" class="col-sm-4">
+                            <!-- Dirección -->
+                            <h2>Domicilio</h2>
+                            <div class="mb-3">
+                                <label for="txtCalle" class="form-label">Calle:</label>
+                                <input type="text" id="txtCalle" class="form-control" placeholder="Calle" required />
                             </div>
+                            <br />
+                            <div class="mb-3">
+                                <label for="txtNExterior" class="form-label">Nº Exterior:</label>
+                                <input type="text" id="txtNExterior" class="form-control" placeholder="Núm. Exterior"
+                                    required />
+                            </div>
+                            <br />
+                            <div class="mb-3">
+                                <label for="txtMunicipio" class="form-label">Municipio:</label>
+                                <input type="text" id="txtMunicipio" class="form-control" placeholder="Municipio"
+                                    required />
+                            </div>
+                            <br />
+                            <div class="mb-3">
+                                <label for="txtEstado" class="form-label">Estado:</label>
+                                <input type="text" id="txtEstado" class="form-control" placeholder="Estado" required />
+                            </div>
+                            <br />
+                            <div class="mb-3">
+                                <label for="txtCP" class="form-label">código Postal:</label>
+                                <input type="text" id="txtCP" class="form-control" placeholder="CP" required
+                                    aria-describedby="txtCPHelpInline" />
+                                <div class="col-auto">
+                                    <span id="txtCPHelpInline" class="form-text">
+                                        Máximo 5 caracteres.
+                                    </span>
+                                </div>
+                            </div>
+                            <br />
+                            <!-- Coordenadas -->
+                            <h2>Coordenadas Mapa</h2>
+                            <div class="mb-3">
+                                <label for="txtLat" class="form-label">Latitud:</label>
+                                <input type="text" id="txtLat" class="form-control" placeholder="Latitud" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="txtLng" class="form-label">Longitud:</label>
+                                <input type="text" id="txtLng" class="form-control" placeholder="Longitud" required />
+                            </div>
+                            <br />
                         </div>
-                        <br />                        
+                        <!-- Div para mostrar resultados de clientes registrados. -->
+                        <div id="divTablaClientes" class="col-sm-4">
+                            <table></table>
+                        </div>
                     </div>
-                    <div id="divGenerales" class="col-sm-4">                        
-                        <!-- Coordenadas -->
-                        <h2>Coordenadas Maps</h2>
-                        <div class="mb-3">
-                            <label for="txtLat" class="form-label">Latitud:</label>
-                            <input type="text" id="txtLat" class="form-control" placeholder="Latitud" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="txtLng" class="form-label">Longitud:</label>
-                            <input type="text" id="txtLng" class="form-control" placeholder="Longitud" required />
-                        </div>
-                        <br />
+                    <div class="row g-3">
                         <div id="controles" class="mb-3">
-                            <button type="button" class="btn btn-primary" onclick="registrar()">Registrar
+                            <button type="submit" id="btnRegistrar" class="btn btn-primary"
+                                onclick="registrar()">Registrar
                                 Clientes</button>
-                            <button type="button" id="btnLimpiar" class="btn btn-primary" onclick="limpiar()">Eliminar Clientes</button><br />
+                            <button type="button" id="btnLimpiar" class="btn btn-danger" onclick="limpiar()">Eliminar
+                                Clientes</button><br />
                         </div>
-                    </div>
-                    <!-- Div para mostrar resultados de clientes registrados. -->                    
-                    <div id="divTablaClientes" class="col-sm-4">
-                        <table></table>
                     </div>
                 </form>
             </div>
             <br />
             <!-- Div para mostrar errores de validación. -->
             <div id="divErrores"></div>
+            <br />
         </div>
     </main>
+    <h1>GOOGLE MAPS</h1>
     <div id="map"></div>
     <footer>
         <div id="footer-img-content">
@@ -186,7 +196,7 @@
             <a href="https://www.instagram.com/chuygonzalezdev"><img alt="Logotipo Instagram"
                     src="./images/logo-instagram.png" width="40" height="40"></a>
         </div>
-        <p><strong>Autor:</strong> Jesús M. González Gómez - @2021</p>
+        <p><strong>Autor:</strong> Chuy González - @2021</p>
     </footer>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2NVosc2MJLaMw8eAFqbh-g0Wjqg3JNvc&callback=iniciarMap"
